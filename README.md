@@ -32,6 +32,7 @@ Link: https://developer.android.com/courses/pathways/android-basics-compose-unit
 <p style=float:left">
   <img src="screenshot_01.png" width="250" />
   <img src="screenshot_02.png" width="250" />
+  <img src="screenshot_03.png" width="250" />
 </p>
 
 ref: unscramble-app-android-kotlin-compose
