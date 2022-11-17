@@ -45,7 +45,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.android.unscramble.R
+import com.example.android.unscramble.R.string
 import com.example.android.unscramble.ui.theme.UnscrambleTheme
 
 
@@ -85,7 +85,7 @@ fun GameScreen(
                     .weight(1f)
                     .padding(end = 8.dp)
             ) {
-                Text(stringResource(R.string.skip))
+                Text(stringResource(string.skip))
             }
 
             Button(
@@ -95,7 +95,7 @@ fun GameScreen(
                     .padding(start = 8.dp),
                 onClick = { gameViewModel.checkUserGuess() }
             ) {
-                Text(stringResource(R.string.submit))
+                Text(stringResource(string.submit))
             }
         }
 
@@ -122,7 +122,7 @@ fun GameStatus(
     ) {
         Text(
             //text = stringResource(R.string.word_count, 0),
-            text = stringResource(R.string.word_count, wordCount),
+            text = stringResource(string.word_count, wordCount),
             fontSize = 18.sp,
         )
         Text(
@@ -130,7 +130,7 @@ fun GameStatus(
                 .fillMaxWidth()
                 .wrapContentWidth(Alignment.End),
             //text = stringResource(R.string.score, 0),
-            text = stringResource(R.string.score, score),
+            text = stringResource(string.score, score),
             fontSize = 18.sp,
         )
     }
@@ -155,7 +155,7 @@ fun GameLayout(
             modifier = modifier.align(Alignment.CenterHorizontally)
         )
         Text(
-            text = stringResource(R.string.instructions),
+            text = stringResource(string.instructions),
             fontSize = 17.sp,
             modifier = Modifier.align(Alignment.CenterHorizontally)
         )
@@ -166,9 +166,9 @@ fun GameLayout(
             onValueChange = onUserGuessChanged,
             label = {
                 if (isGuessWrong) {
-                    Text(stringResource(R.string.wrong_guess))
+                    Text(stringResource(string.wrong_guess))
                 } else {
-                    Text(stringResource(R.string.enter_your_word))
+                    Text(stringResource(string.enter_your_word))
                 }
             },
             isError = isGuessWrong,
@@ -199,9 +199,9 @@ private fun FinalScoreDialog(
             // button. If you want to disable that functionality, simply use an empty
             // onCloseRequest.
         },
-        title = { Text(stringResource(R.string.congratulations)) },
+        title = { Text(stringResource(string.congratulations)) },
         //text = { Text(stringResource(R.string.you_scored, 0)) },
-        text = { Text(stringResource(R.string.you_scored, score)) },
+        text = { Text(stringResource(string.you_scored, score)) },
         modifier = modifier,
         dismissButton = {
             TextButton(
@@ -209,14 +209,14 @@ private fun FinalScoreDialog(
                     activity.finish()
                 }
             ) {
-                Text(text = stringResource(R.string.exit))
+                Text(text = stringResource(string.exit))
             }
         },
         confirmButton = {
             TextButton(
                 onClick = onPlayAgain
             ) {
-                Text(text = stringResource(R.string.play_again))
+                Text(text = stringResource(string.play_again))
             }
         }
     )
