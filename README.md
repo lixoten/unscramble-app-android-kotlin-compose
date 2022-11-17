@@ -37,6 +37,5 @@ Link: https://developer.android.com/courses/pathways/android-basics-compose-unit
 
 ref: unscramble-app-android-kotlin-compose
 
-#appunscramble #scrolllist #icon #materialDesign #topbar
-#datasource #lazycolumn #viewmodel
-#card #codelab #fonts #addfonts
+#appunscramble #viewmodel
+#codelab
